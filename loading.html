@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #d1{
+            height:500px;
+            display:flex;
+            align-items:center;
+        }
+        #load{
+            width:200px;
+            font-size: 22pt;
+            font-weight: 800;
+            overflow: hidden;
+            position:relative;
+  
+        }
+        /* #load span:nth-child(1){
+             background:linear-gradient(blue,green,red,yellow);  
+           -webkit-background-clip:text;
+             -webkit-text-fill-color: transparent;
+             animation:text 4s infinite; 
+              
+        } */
+        #load span:nth-child(2){
+            position:absolute;
+             animation:ani 1.4s infinite;
+             left:125px;
+            
+        }
+        #load span:nth-child(3){
+            position:absolute;
+             animation:ani2 1.4s infinite; 
+             left:140px;
+             /* animation-delay:2s; */
+
+        }
+        #load span:nth-child(4){
+            position:absolute;
+             animation:ani3 1.4s infinite;    
+             left:155px;
+             /* animation-delay:4s; */
+        }
+        @keyframes ani{
+            0%{
+                left:125px;
+               
+            }80%{
+                left:140px;
+            }100%{
+                left:155px;
+            }
+        }
+        @keyframes ani2{
+            0%{
+                left:140px;
+               
+            }80%{
+                left:155px;
+            }100%{
+                left:125px;
+            }
+        }
+        @keyframes ani3{
+            0%{
+                left:155px;
+               
+            }80%{
+                left:125px;
+            }100%{
+                left:140px;
+            }
+        }
+        /* @keyframes text {
+            100%{
+                filter:hue-rotate(360deg)
+            }
+            } */
+    </style>
+</head>
+<body>
+    <div id="d1"><div id="load"><span>Loading</span><span> .</span><span> .</span><span> .</span></div></div>
+</body>
+</html>
